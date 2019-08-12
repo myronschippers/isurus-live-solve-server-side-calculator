@@ -25,6 +25,10 @@ app.post('/api/calculation', (req, res) => {
     res.send('OK');
 });
 
+app.get('/api/history', (req, res) => {
+    res.send(calculationHistory);
+});
+
 app.listen(PORT, () => {
     console.log('Listening on port: ', PORT);
 });
