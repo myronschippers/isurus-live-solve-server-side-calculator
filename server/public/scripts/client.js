@@ -88,6 +88,11 @@ function typeToOperator(type) {
 }
 
 function render(historyArray) {
+    // exit early if there is nothing in the array
+    if (historyArray.length === 0) {
+        return false;
+    }
+
     const lastIndex = historyArray.length -1;
     const latObject = historyArray[lastIndex];
     const lastAnswer = latObject.answer;
