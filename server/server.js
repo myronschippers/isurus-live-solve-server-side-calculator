@@ -15,7 +15,6 @@ app.post('/api/calculation', (req, res) => {
         numberOne: parseInt(req.body.numberOne),
         numberTwo: parseInt(req.body.numberTwo),
         mathType: req.body.mathType,
-        answer: answer,
     };
     const answer = runCalculation(newMathHistoryObject);
     newMathHistoryObject.answer = answer;
